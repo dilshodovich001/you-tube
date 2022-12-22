@@ -64,6 +64,7 @@ public class SecurityConfig {
                 .requestMatchers("/init/**").permitAll()
                 .requestMatchers("/init/**").permitAll()
                 .requestMatchers("/profile/filter/**").permitAll()
+                .requestMatchers("/profile/change/**").permitAll()
                 .requestMatchers(AUTH_WHITELIST).permitAll()
                 .anyRequest().authenticated().and().addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class);
         http.exceptionHandling().authenticationEntryPoint(authenticationEntryPoint);

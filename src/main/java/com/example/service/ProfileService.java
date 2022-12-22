@@ -6,6 +6,8 @@ import com.example.entity.ProfileEntity;
 import com.example.enums.ProfileStatus;
 import com.example.exceptions.EmailAlreadyExistsException;
 import com.example.exceptions.ItemNotFoundException;
+import com.example.exceptions.PasswordOrEmailWrongException;
+import com.example.exceptions.WrongException;
 import com.example.repository.ProfileRepository;
 import com.example.util.Md5Util;
 import com.example.util.SpringSecurityUtil;
@@ -59,7 +61,20 @@ public class ProfileService {
     }
 
     public ChangeDTO change(ChangeDTO dto) {
-        profileRepository.findB
-        return null;
+        ProfileEntity exists = profileRepository.findByPassword(Md5Util.encode(dto.getOldPassword()));
+        if (exists == null){
+            log.info("Not Found password -> "+ dto);
+            throw new ItemNotFoundException("Not found");
+        }
+         int b = profileRepository.change(exists.getId(),Md5Util.encode(dto.getNewPassword()));
+        if (b == 0){
+            throw new WrongException("Error");
+        }
+        return dto;
+    }
+
+    public int updateUser(ProfileDTO profileDTO) {
+        return profileRepository.updateUserById(profileDTO.getName(),
+                profileDTO.getSurname(), SpringSecurityUtil.getCurrentUserId());
     }
 }

@@ -11,6 +11,32 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzE3MDY5MTEsInBob25lIjoiM
   "role": "ROLE_MODERATOR"
 }
 
+
+
+### change paswword
+POST localhost:8080/profile/change
+Content-Type: application/json
+
+{
+  "oldPassword": "88888",
+  "newPassword": "99999"
+}
+
+
+
+### update user
+PUT http://localhost:8080/profile/update
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzE3MDk4NzcsInBob25lIjoiODg4ODgiLCJyb2xlIjoiUk9MRV9VU0VSIiwiZXhwIjoxNjcxNzk2Mjc3LCJpc3MiOiJ5b3UgdHViZSB0ZXN0ICJ9.3kO6IvFf7u0fcSFiCzPsYiifZs-FbRzhPI0mDmarV_uZUCcKSD3FpgiYL1NIvXjoqzna1K8C_v5O5bF3SGL7Bw
+
+{
+  "name": "Dakejon",
+  "surname": "Nurlanovic",
+  "phone": "88888",
+  "password": "99999",
+  "email": "boy.pacan@gmail.com"
+}
+
 #### Get List
 #GET localhost:8080/profile/admin/list?page=0&size=10
 #Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzE1MzAwODUsInBob25lIjoiMDAwMCIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNjcxNjE2NDg1LCJpc3MiOiJrdW51eiB0ZXN0IHBvcnRhbGkifQ.GBWSosSp43ovcZBTmwhQPoqRDYkz_6CdvLjhm6AsF1EdvS3zxE2eM3Bl7quCiH2lterU3KBCSjd78PsMvdpWQw
