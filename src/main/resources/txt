@@ -1,0 +1,8 @@
+1. Profile (USER role)
+	1. Change password
+	2. Update Email (with email verification)
+	3. Update Profile Detail(name,surname)
+	4. Update Profile Attach (main_photo) (delete old attach)
+	5. Get Profile Detail (id,name,surname,email,main_photo((url)))
+    6. Create Profile (ADMIN)
+        (id,name,surname,email,Role(ADMIN,MODERATOR))

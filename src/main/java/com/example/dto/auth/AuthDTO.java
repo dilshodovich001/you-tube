@@ -16,4 +16,5 @@ public class AuthDTO {
     @NotBlank
     @Size(min = 4, message = "Password is required")
     private String password;
+
 }

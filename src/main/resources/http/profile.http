@@ -1,0 +1,28 @@
+### Profile Create
+POST localhost:8080/profile/admin/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzE3MDY5MTEsInBob25lIjoiMDAwMCIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNjcxNzkzMzExLCJpc3MiOiJ5b3UgdHViZSB0ZXN0ICJ9.CHcLD9JMtxNng6HCKk0Od2ntVwYkaI1N-nlJKt1j4JlpfjGI4aanCALuWGgn3tLqFR9eRLuQmjrAcouN9t7dRA
+
+{
+  "name": "Alisa",
+  "surname": "ljsdfgladfj",
+  "phone": "8883399998",
+  "password": "333333333",
+  "role": "ROLE_MODERATOR"
+}
+
+#### Get List
+#GET localhost:8080/profile/admin/list?page=0&size=10
+#Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzE1MzAwODUsInBob25lIjoiMDAwMCIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNjcxNjE2NDg1LCJpc3MiOiJrdW51eiB0ZXN0IHBvcnRhbGkifQ.GBWSosSp43ovcZBTmwhQPoqRDYkz_6CdvLjhm6AsF1EdvS3zxE2eM3Bl7quCiH2lterU3KBCSjd78PsMvdpWQw
+#
+#
+#
+#### Profile Filter
+#POST localhost:8081/profile/filter?page=0&size=10
+#Content-Type: application/json
+#
+#{
+#  "name": "Gulom",
+#  "phone": "8888",
+#  "role": "ROLE_PUBLISHER"
+#}
