@@ -1,0 +1,33 @@
+### Registration
+POST http://localhost:8080/auth/registration
+Content-Type: application/json
+
+{
+  "name": "MuhammadSodiq",
+  "surname": "sddddddddd",
+  "phone": "7777",
+  "password": "7777",
+  "email": "raufovmaruf555@gmail.com"
+}
+
+
+
+
+### Authorization user
+POST localhost:8080/auth/login
+Content-Type: application/json
+Accept-Language: RU
+
+{
+  "phone":"7777",
+  "password": "7777"
+}
+
+### Authorization Admin
+POST localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "phone": "7777",
+  "password": "7777"
+}

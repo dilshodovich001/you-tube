@@ -10,4 +10,5 @@ public class YouTubeApplication {
 		SpringApplication.run(YouTubeApplication.class, args);
 	}
 
+
 }

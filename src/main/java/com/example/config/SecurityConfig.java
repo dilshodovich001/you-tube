@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -24,7 +25,7 @@ public class SecurityConfig {
     @Autowired
     private JwtTokenFilter jwtTokenFilter;
     @Autowired
-    private AuthenticationEntryPointJwt authenticationEntryPointJwt;
+    private AuthenticationEntryPoint authenticationEntryPoint;
 
     private static final String[] AUTH_WHITELIST = {
             "/v2/api-docs",
@@ -65,7 +66,7 @@ public class SecurityConfig {
                 .requestMatchers("/profile/filter/**").permitAll()
                 .requestMatchers(AUTH_WHITELIST).permitAll()
                 .anyRequest().authenticated().and().addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class);
-        http.exceptionHandling().authenticationEntryPoint(authenticationEntryPointJwt);
+        http.exceptionHandling().authenticationEntryPoint(authenticationEntryPoint);
         return http.build();
     }
 

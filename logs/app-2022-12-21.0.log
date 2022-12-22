@@ -1,0 +1,40 @@
+2022-12-21T23:54:44.871+05:00  INFO 16482 --- [main] com.example.YouTubeApplication           : Starting YouTubeApplication using Java 19.0.1 with PID 16482 (/home/maruf/Downloads/you_tube/target/classes started by maruf in /home/maruf/Downloads/you_tube)
+2022-12-21T23:54:44.883+05:00 DEBUG 16482 --- [main] com.example.YouTubeApplication           : Running with Spring Boot v3.0.0, Spring v6.0.2
+2022-12-21T23:54:44.884+05:00  INFO 16482 --- [main] com.example.YouTubeApplication           : The following 1 profile is active: "dev"
+2022-12-21T23:54:45.469+05:00  INFO 16482 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-21T23:54:45.511+05:00  INFO 16482 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
+2022-12-21T23:54:45.904+05:00  INFO 16482 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-21T23:54:45.910+05:00  INFO 16482 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-21T23:54:45.911+05:00  INFO 16482 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-21T23:54:45.958+05:00  INFO 16482 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-21T23:54:45.958+05:00  INFO 16482 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1037 ms
+2022-12-21T23:54:46.047+05:00  INFO 16482 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2022-12-21T23:54:46.048+05:00  INFO 16482 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2022-12-21T23:54:46.048+05:00  INFO 16482 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-12-21T23:54:46.052+05:00  INFO 16482 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-21T23:54:46.260+05:00  INFO 16482 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@755b5f30
+2022-12-21T23:54:46.261+05:00  INFO 16482 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-21T23:54:46.273+05:00  INFO 16482 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/you_tube (PostgreSQL 15.1)
+2022-12-21T23:54:46.292+05:00  INFO 16482 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.006s)
+2022-12-21T23:54:46.292+05:00  WARN 16482 --- [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2022-12-21T23:54:46.328+05:00  INFO 16482 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2022-12-21T23:54:46.329+05:00  INFO 16482 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2022-12-21T23:54:46.388+05:00  INFO 16482 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-21T23:54:46.414+05:00  INFO 16482 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2022-12-21T23:54:46.518+05:00  WARN 16482 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-12-21T23:54:46.612+05:00  INFO 16482 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-12-21T23:54:47.105+05:00  INFO 16482 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-21T23:54:47.110+05:00  INFO 16482 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-21T23:54:47.330+05:00 DEBUG 16482 --- [main] com.example.config.JwtTokenFilter        : Filter 'jwtTokenFilter' configured for use
+2022-12-21T23:54:47.487+05:00  WARN 16482 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-21T23:54:47.930+05:00  INFO 16482 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6915351c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2ac0cb64, org.springframework.security.web.context.SecurityContextHolderFilter@e8fb390, org.springframework.security.web.header.HeaderWriterFilter@299cddbf, org.springframework.security.web.authentication.logout.LogoutFilter@7baf7e2c, com.example.config.JwtTokenFilter@5114c8a1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5cdf61d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4509414e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7be3a837, org.springframework.security.web.access.ExceptionTranslationFilter@5f5fb335, org.springframework.security.web.access.intercept.AuthorizationFilter@3f7f9d3f]
+2022-12-21T23:54:48.157+05:00  INFO 16482 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-21T23:54:48.166+05:00  INFO 16482 --- [main] com.example.YouTubeApplication           : Started YouTubeApplication in 3.7 seconds (process running for 4.206)
+2022-12-21T23:54:48.170+05:00  INFO 16482 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/you_tube (PostgreSQL 15.1)
+2022-12-21T23:54:48.175+05:00  INFO 16482 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.001s)
+2022-12-21T23:54:48.175+05:00  WARN 16482 --- [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2022-12-21T23:54:48.179+05:00  INFO 16482 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2022-12-21T23:54:48.180+05:00  INFO 16482 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2022-12-21T23:55:00.909+05:00  INFO 16482 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-21T23:55:00.909+05:00  INFO 16482 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-21T23:55:00.910+05:00  INFO 16482 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
