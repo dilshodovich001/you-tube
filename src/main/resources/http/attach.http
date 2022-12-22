@@ -1,0 +1,15 @@
+POST http://localhost:8081/attach/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="Larsson.jpg"
+### file yo`li
+/Users/baxromergashev/Desktop/Larsson.jpg
+
+
+
+###
+GET http://localhost:8081/attach/open/a1d1d750-a08a-47a6-b620-d32d4faaeba1.jpeg
+
+###
+

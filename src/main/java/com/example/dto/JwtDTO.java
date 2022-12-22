@@ -11,6 +11,4 @@ import lombok.Setter;
 public class JwtDTO {
     private String phone;
     private ProfileRole role;
-
-
 }

@@ -55,14 +55,17 @@ public class SecurityConfig {
         // authorization
         http.cors().disable().csrf().disable();
         http.authorizeHttpRequests()
+                .requestMatchers("/tag/**").permitAll()
+                .requestMatchers("/category/admin/update/**").permitAll()
                 .requestMatchers("/profile/admin/**").hasRole("ADMIN")
                 .requestMatchers("/article/moderator/**").hasRole("MODERATOR")
                 .requestMatchers("/article/last_eight/**").permitAll()
                 .requestMatchers("/public/**").permitAll()
                 .requestMatchers("/auth/**").permitAll()
-                .requestMatchers("/category/**").hasAnyRole("USER", "ADMIN")
+                .requestMatchers("/category/**").permitAll()//hasAnyRole("USER", "ADMIN")
                 .requestMatchers("/init/**").permitAll()
                 .requestMatchers("/init/**").permitAll()
+                .requestMatchers("/attach/**").permitAll()
                 .requestMatchers("/profile/filter/**").permitAll()
                 .requestMatchers(AUTH_WHITELIST).permitAll()
                 .anyRequest().authenticated().and().addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class);

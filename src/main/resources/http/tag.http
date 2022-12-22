@@ -1,0 +1,21 @@
+### 1. Create Category
+POST http://localhost:8081/tag/admin/create
+Content-Type: application/json
+
+{
+  "name": "birthday"
+}
+
+###2. Update Category (ADMIN)
+PUT http://localhost:8081/tag/admin/update/1
+Content-Type: application/json
+
+{
+  "name": "fc_barcelona"
+}
+
+###  3. Delete Category (ADMIN)
+DELETE http://localhost:8081/tag/admin/delete/1
+
+###  4. Category List
+GET http://localhost:8081/tag/category_list

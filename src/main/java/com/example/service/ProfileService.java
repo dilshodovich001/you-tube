@@ -59,7 +59,7 @@ public class ProfileService {
     }
 
     public ChangeDTO change(ChangeDTO dto) {
-        profileRepository.findB
+       // profileRepository.findB
         return null;
     }
 }

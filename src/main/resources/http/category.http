@@ -1,0 +1,21 @@
+### 1. Create Category (ADMIN)
+POST http://localhost:8081/category/admin/create
+Content-Type: application/json
+
+{
+  "name": "Football"
+}
+
+###2. Update Category (ADMIN)
+PUT http://localhost:8081/category/admin/update/1
+Content-Type: application/json
+
+{
+  "name": "MMA"
+}
+
+###  3. Delete Category (ADMIN)
+DELETE http://localhost:8081/category/admin/delete/1
+
+###  4. Category List
+GET http://localhost:8081/category/category_list
