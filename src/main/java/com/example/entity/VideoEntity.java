@@ -29,19 +29,19 @@ public class VideoEntity {
 
     @Column(name = "preview_attach_id")
     private String attachId;
-    @JoinColumn(name = "preview_attach_id")
+    @JoinColumn(name = "preview_attach_id",insertable = false,updatable = false)
     @ManyToOne(fetch = FetchType.LAZY)
     private AttachEntity previewAttach;
     @Column
     private String title;
     @Column(name = "category_id")
     private Integer categoryId;
-    @JoinColumn(name = "category_id")
+    @JoinColumn(name = "category_id",insertable = false,updatable = false)
     @ManyToOne(fetch = FetchType.LAZY)
     private CategoryEntity category;
     @Column(name = "attach_id")
     private String attachVideoId;
-    @JoinColumn(name = "attach_id")
+    @JoinColumn(name = "attach_id",insertable = false,updatable = false)
     @OneToOne(fetch = FetchType.LAZY)
     private AttachEntity attachVideo;
     @Column(name = "created_date")
@@ -62,7 +62,7 @@ public class VideoEntity {
     private String description;
     @Column(name = "channel_id")
     private String channelId;
-    @JoinColumn(name = "channel_id")
+    @JoinColumn(name = "channel_id",insertable = false,updatable = false)
     @ManyToOne(fetch = FetchType.LAZY)
     private ChannelEntity channel;
 
