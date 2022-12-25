@@ -39,3 +39,37 @@
 2022-12-25T07:42:16.889+05:00  INFO 4443 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-12-25T07:42:16.891+05:00  INFO 4443 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2022-12-25T07:42:16.896+05:00  INFO 4443 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-25T10:28:22.024+05:00  INFO 6037 --- [main] com.example.YouTubeApplication           : Starting YouTubeApplication using Java 19.0.1 with PID 6037 (/home/maruf/Downloads/you_tube/target/classes started by maruf in /home/maruf/Downloads/you_tube)
+2022-12-25T10:28:22.034+05:00 DEBUG 6037 --- [main] com.example.YouTubeApplication           : Running with Spring Boot v3.0.0, Spring v6.0.2
+2022-12-25T10:28:22.034+05:00  INFO 6037 --- [main] com.example.YouTubeApplication           : The following 1 profile is active: "dev"
+2022-12-25T10:28:22.631+05:00  INFO 6037 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-25T10:28:22.694+05:00  INFO 6037 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 7 JPA repository interfaces.
+2022-12-25T10:28:23.064+05:00  INFO 6037 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-25T10:28:23.070+05:00  INFO 6037 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-25T10:28:23.070+05:00  INFO 6037 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-25T10:28:23.119+05:00  INFO 6037 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-25T10:28:23.119+05:00  INFO 6037 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1048 ms
+2022-12-25T10:28:23.200+05:00  INFO 6037 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-25T10:28:23.224+05:00  INFO 6037 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2022-12-25T10:28:23.328+05:00  WARN 6037 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-12-25T10:28:23.389+05:00  INFO 6037 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-25T10:28:23.564+05:00  INFO 6037 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@47c96f2c
+2022-12-25T10:28:23.565+05:00  INFO 6037 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-25T10:28:23.591+05:00  INFO 6037 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-12-25T10:28:24.226+05:00  INFO 6037 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-25T10:28:24.231+05:00  INFO 6037 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-25T10:28:24.634+05:00 DEBUG 6037 --- [main] com.example.config.JwtTokenFilter        : Filter 'jwtTokenFilter' configured for use
+2022-12-25T10:28:24.995+05:00  WARN 6037 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-25T10:28:25.430+05:00  INFO 6037 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4c3125ff, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@d2ca3a9, org.springframework.security.web.context.SecurityContextHolderFilter@4f5d587c, org.springframework.security.web.header.HeaderWriterFilter@56114349, org.springframework.security.web.authentication.logout.LogoutFilter@12d24c43, com.example.config.JwtTokenFilter@495e1ad1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@413a2520, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@39d62e47, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b26d289, org.springframework.security.web.access.ExceptionTranslationFilter@4f8488ef, org.springframework.security.web.access.intercept.AuthorizationFilter@4700db93]
+2022-12-25T10:28:25.638+05:00  INFO 6037 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-25T10:28:25.647+05:00  INFO 6037 --- [main] com.example.YouTubeApplication           : Started YouTubeApplication in 3.972 seconds (process running for 4.443)
+2022-12-25T10:28:25.673+05:00  INFO 6037 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2022-12-25T10:28:25.673+05:00  INFO 6037 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2022-12-25T10:28:25.673+05:00  INFO 6037 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-12-25T10:28:25.683+05:00  INFO 6037 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/youtube1 (PostgreSQL 15.1)
+2022-12-25T10:28:25.709+05:00  INFO 6037 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.014s)
+2022-12-25T10:28:25.717+05:00  INFO 6037 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 3
+2022-12-25T10:28:25.718+05:00  INFO 6037 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2022-12-25T11:40:03.776+05:00  INFO 6037 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-25T11:40:03.778+05:00  INFO 6037 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-25T11:40:03.783+05:00  INFO 6037 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -2,15 +2,22 @@ package com.example.entity;
 
 import com.example.enums.VideoStatus;
 import com.example.enums.VideoType;
+import com.sun.jdi.event.StepEvent;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.bytecode.internal.bytebuddy.BytecodeProviderImpl;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name = "video")
 public class VideoEntity {
@@ -19,45 +26,49 @@ public class VideoEntity {
     @GenericGenerator(name = "system-uuid", strategy = "uuid2")
     @Column(name = "id", unique = true)
     private String id;
-    private String title;
-
-    private LocalDate createdDate;
-    private LocalDate publishedDate;
-    private VideoStatus videoStatus;
-    private VideoType videoType;
-    private Integer viewCount;
-
-
-    private String description;
-    private Long likeCount;
-    private Long dislikeCount;
 
     @Column(name = "preview_attach_id")
-    private String preview_attach_id;
-    @JoinColumn(name = "preview_attach_id",insertable = false,updatable = false)
-    @OneToOne(fetch = FetchType.LAZY)
-    private AttachEntity preview;
-
+    private String attachId;
+    @JoinColumn(name = "preview_attach_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    private AttachEntity previewAttach;
     @Column
-    private Integer category_id;
-    @JoinColumn(name = "category_id", insertable = false, updatable = false)
-    @OneToOne(fetch = FetchType.LAZY)
+    private String title;
+    @Column(name = "category_id")
+    private Integer categoryId;
+    @JoinColumn(name = "category_id")
+    @ManyToOne(fetch = FetchType.LAZY)
     private CategoryEntity category;
-
-    @Column
-    private String attach_id;
-    @JoinColumn(name = "attach_id", insertable = false, updatable = false)
+    @Column(name = "attach_id")
+    private String attachVideoId;
+    @JoinColumn(name = "attach_id")
     @OneToOne(fetch = FetchType.LAZY)
-    private AttachEntity attach;
-
+    private AttachEntity attachVideo;
+    @Column(name = "created_date")
+    private LocalDateTime createdDate;
+    @Column(name = "published_date")
+    private LocalDateTime publishedDate;
     @Column
-    private Long shared_count;
+    @Enumerated(EnumType.STRING)
+    private VideoStatus status;
+    @Column
+    @Enumerated(EnumType.STRING)
+    private VideoType type;
+    @Column(name = "view_count")
+    private Long viewCount;
+    @Column(name = "shared_count")
+    private Long sharedCount;
+    @Column
+    private String description;
+    @Column(name = "channel_id")
+    private String channelId;
+    @JoinColumn(name = "channel_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    private ChannelEntity channel;
 
+    @Column(name = "like_count")
+    private Long likeCount;
 
-    // id(uuid), preview_attach_id,title,category_id,attach_id,created_date,published_date,
-    // status(private,public),
-    // type(video,short),view_count,shared_count,description,channel_id,(like_count,dislike_count),
-    // category_id
-    // view_count -> Okala view_count buyerda ham bo'lsin. Alohida Table ham bo'lsin.
-    //       category_id -> bitta channel bitta category bo'lsin.
+    @Column(name = "dislike_count")
+    private Long dislikeCount;
 }

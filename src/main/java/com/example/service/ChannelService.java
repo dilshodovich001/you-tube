@@ -143,7 +143,7 @@ public class ChannelService {
             if (id.isBlank())
                 throw new ChannelNullExceptions("id is not provided");
             Optional<ChannelEntity> optionalChannel = channelRepository.findById(id);
-            if (!optionalChannel.isPresent())
+            if (optionalChannel.isEmpty())
                 throw new ChannelNullExceptions("channel is not found id=" + id);
             Integer update = channelRepository.update(attachEntity.getId(), id);
             return update;
@@ -184,7 +184,7 @@ public class ChannelService {
             if (id.isBlank())
                 throw new ChannelNullExceptions("id is not provided");
             Optional<ChannelEntity> optionalChannel = channelRepository.findById(id);
-            if (!optionalChannel.isPresent())
+            if (optionalChannel.isEmpty())
                 throw new ChannelNullExceptions("channel is not found id=" + id);
             Integer update = channelRepository.update_banner(attachEntity.getId(), id);
             return update;
@@ -221,7 +221,7 @@ public class ChannelService {
         if (id.isBlank())
             throw new ChannelNullExceptions("id is not provided");
         Optional<ChannelEntity> optionalChannel = channelRepository.findById(id);
-        if (!optionalChannel.isPresent())
+        if (optionalChannel.isEmpty())
             throw new ChannelNullExceptions("channel is not found id=" + id);
         return todto(optionalChannel.get());
 
@@ -231,7 +231,7 @@ public class ChannelService {
         if (id.isBlank())
             throw new ChannelNullExceptions("id is not provided");
         Optional<ChannelEntity> optionalChannel = channelRepository.findById(id);
-        if (!optionalChannel.isPresent())
+        if (optionalChannel.isEmpty())
             throw new ChannelNullExceptions("channel is not found id=" + id);
 
         Integer integer = channelRepository.updateStatus(id, status);
@@ -246,7 +246,7 @@ public class ChannelService {
         if (id.isBlank())
             throw new ChannelNullExceptions("id is not provided");
         Optional<ChannelEntity> optionalChannel = channelRepository.findById(id);
-        if (!optionalChannel.isPresent())
+        if (optionalChannel.isEmpty())
             throw new ChannelNullExceptions("channel is not found id=" + id);
 
         List<ChannelEntity> allByProfile_id = channelRepository.findAllByProfile_id(id);

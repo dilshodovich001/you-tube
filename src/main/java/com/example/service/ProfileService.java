@@ -119,12 +119,11 @@ public class ProfileService {
         AttachEntity attach = attachRepository.findById(id).orElseThrow(() -> {
             throw new ItemNotFoundException("Not found");
         });
-
+         profileRepository.attachUpdate(id,profile.getId());
         File file = new File(attachFolder + attach.getPath() + "/" + id + "." + attach.getExtension());
         if (file.delete()) {
             attachRepository.deleteById(id);
         }
-      //TODO shu yerda old photo idni attach table i filedan ochirishni qilish kerak
         return profileRepository.attachUpdate(id,userId);
     }
 }
