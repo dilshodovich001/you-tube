@@ -37,4 +37,7 @@ public class AttachEntity {
 
     @Column(name = "created_date")
     private LocalDateTime createdData = LocalDateTime.now();
+
+    @Column
+    private String attachOpenUrl;
 }

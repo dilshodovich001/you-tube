@@ -71,6 +71,7 @@ public class AttachService {
             entity.setSize(file.getSize());
             entity.setOriginalName(file.getOriginalFilename());
             entity.setCreatedData(LocalDateTime.now());
+            entity.setAttachOpenUrl(attachOpenUrl + fileName);
             entity.setId(uuid);
             attachRepository.save(entity);
 

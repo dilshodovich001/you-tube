@@ -55,6 +55,7 @@ public class SecurityConfig {
         // authorization
         http.cors().disable().csrf().disable();
         http.authorizeHttpRequests()
+                .requestMatchers("/channel/**").permitAll()
                 .requestMatchers("/tag/**").permitAll()
                 .requestMatchers("/category/admin/update/**").permitAll()
                 .requestMatchers("/profile/admin/**").hasRole("ADMIN")

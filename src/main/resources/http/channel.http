@@ -1,0 +1,9 @@
+POST http://localhost:8081/channel/save
+Content-Type: application/json
+
+{
+  "name": "sporttv",
+  "description": "sporttv yangiliklar doim birga"
+
+
+}
