@@ -81,6 +81,7 @@ public class AuthService {
         entity.setStatus(ProfileStatus.NOT_ACTIVE);
         entity.setCreatedDate(LocalDateTime.now());
         entity.setVisible(true);
+        entity.setPhotoId(dto.getPhotoId());
         entity.setEmail(dto.getEmail());
         profileRepository.save(entity);
         Thread thread = new Thread() {
@@ -94,7 +95,7 @@ public class AuthService {
         return "Confirm that the message has been sent to your email";
     }
 
-    private void sendVerificationEmail(ProfileEntity entity) {
+    public void sendVerificationEmail(ProfileEntity entity) {
         StringBuilder builder = new StringBuilder();
         String encode = JwtTokenUtil.encode(entity.getPhone(), entity.getRole());
         builder.append("<h1 style=\"text-align: center\">Complete Registration</h1>");

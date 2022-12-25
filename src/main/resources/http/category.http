@@ -18,4 +18,4 @@ Content-Type: application/json
 DELETE http://localhost:8081/category/admin/delete/1
 
 ###  4. Category List
-GET http://localhost:8081/category/category_list
+GET http://localhost:8080/category/category_list

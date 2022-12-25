@@ -2,6 +2,7 @@ package com.example.service;
 
 import com.example.dto.AttachDTO;
 import com.example.entity.AttachEntity;
+import com.example.exceptions.ItemNotFoundException;
 import com.example.repository.AttachRepository;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -173,8 +174,7 @@ public class AttachService {
             dtoList.add(attachDTO);
         }
 
-        Page<AttachDTO> attachDTOPage = new PageImpl<>(dtoList, paging, entityPage.getTotalElements());
-        return attachDTOPage;
+        return new PageImpl<>(dtoList, paging, entityPage.getTotalElements());
     }
 
     public AttachDTO toDTO(AttachEntity entity) {
@@ -185,6 +185,9 @@ public class AttachService {
         dto.setPath(entity.getPath());
         dto.setCreatedData(entity.getCreatedData());
         return dto;
+    }
+    public AttachEntity get(String id) {
+        return attachRepository.findById(id).orElseThrow(() -> new ItemNotFoundException("Attach not found"));
     }
 
 

@@ -2,11 +2,13 @@ package com.example.controller;
 
 import com.example.dto.ProfileDTO;
 import com.example.dto.auth.ChangeDTO;
+import com.example.dto.auth.ChangeEmailDTO;
 import com.example.service.ProfileService;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @Slf4j
@@ -39,5 +41,23 @@ public class ProfileController {
         }
         return ResponseEntity.badRequest().build();
     }
+
+
+    @PutMapping("/update/email")
+    public ResponseEntity<ChangeEmailDTO> changeEmail(@Valid @RequestBody ChangeEmailDTO dto){
+        log.info("Change Password -> " + dto);
+        ChangeEmailDTO response = profileService.updateEmail(dto);
+        return ResponseEntity.ok(response);
+    }
+
+
+        @PreAuthorize("hasRole('USER')")
+    @PutMapping("/update/attach")
+    public ResponseEntity<?> attachUpdate(@RequestParam("id") String id){
+        log.info("Change Password -> " + id);
+        int response = profileService.attachUpdate(id);
+        return ResponseEntity.ok(response);
+    }
+
 
 }

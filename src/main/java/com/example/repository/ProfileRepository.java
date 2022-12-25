@@ -18,6 +18,7 @@ public interface ProfileRepository extends JpaRepository<ProfileEntity, Integer>
     ProfileEntity findByPassword(String password);
 
 
+
     @Transactional
     @Modifying
     @Query("update ProfileEntity set password = ?2 where id = ?1")
@@ -26,4 +27,15 @@ public interface ProfileRepository extends JpaRepository<ProfileEntity, Integer>
     @Modifying
     @Query("update ProfileEntity set name = ?1, surname = ?2   where id = ?3")
     int updateUserById(String name, String surname, Integer currentUserId);
+
+    @Transactional
+    @Modifying
+    @Query("update ProfileEntity set email = ?1 , status = ?2 where id = ?3")
+    int changeEmail( String newEmail,String status , Integer id);
+
+
+    @Transactional
+    @Modifying
+    @Query("update ProfileEntity set photoId = ?1  where id = ?2")
+    int attachUpdate(String id, Integer userId);
 }

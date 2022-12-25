@@ -37,6 +37,20 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzE3MDk4NzcsInBob25lIjoiO
   "email": "boy.pacan@gmail.com"
 }
 
+####  update email
+#PUT http://localhost:8080/profile/update/email
+#Content-Type: application/json
+#
+#{
+#  ""
+#}
+### update
+PUT http://localhost:8080/profile/update/attach?id=85711ed8-8901-4382-ab27-833f56ba5f65
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzE4MjE1NDQsInBob25lIjoiNDU0NSIsInJvbGUiOiJST0xFX1VTRVIiLCJleHAiOjE2NzE5MDc5NDQsImlzcyI6InlvdSB0dWJlIHRlc3QgIn0.QasUdTbiKhaBMxzP61LAXYIEqxRn6fPmVzbwBQsh7nh5iTf5q74WgWadxVm_VqX-4dMTy1kYXaVLI18j_wQnPg
+
+
+
+
 #### Get List
 #GET localhost:8080/profile/admin/list?page=0&size=10
 #Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzE1MzAwODUsInBob25lIjoiMDAwMCIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNjcxNjE2NDg1LCJpc3MiOiJrdW51eiB0ZXN0IHBvcnRhbGkifQ.GBWSosSp43ovcZBTmwhQPoqRDYkz_6CdvLjhm6AsF1EdvS3zxE2eM3Bl7quCiH2lterU3KBCSjd78PsMvdpWQw

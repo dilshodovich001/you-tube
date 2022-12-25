@@ -43,7 +43,7 @@ public class CategoryService {
             throw new CategoryNullException("id must be bigger than 0" + id);
         }
         Optional<CategoryEntity> categoryEntityOptional = categoryRepository.findById(id);
-        if (!categoryEntityOptional.isPresent())
+        if (categoryEntityOptional.isEmpty())
             throw new CategoryNullException("category with this id=" + id + " not found");
         categoryRepository.delete(categoryEntityOptional.get());
         return "deleted successfully";
@@ -57,7 +57,7 @@ public class CategoryService {
             CategoryDTO dto = toDto(entity);
             categoryDTOList.add(dto);
         });
-        return null;
+        return categoryDTOList;
     }
 
     public CategoryEntity toEntity(CategoryDTO categoryDto) {

@@ -3,11 +3,12 @@ POST http://localhost:8080/auth/registration
 Content-Type: application/json
 
 {
-  "name": "Dastan",
-  "surname": "Abilashomov",
-  "phone": "88888",
-  "password": "88888",
-  "email": "boy.pacan@gmail.com"
+  "name": "Muzaffar",
+  "surname": "Muysinov",
+  "phone": "4545",
+  "password": "4545",
+  "email": "muysinovmuxsinbek9@gmail.com",
+  "photoId": "4ea03efc-b2a4-41cb-9658-3d0c88971755"
 }
 
 
@@ -19,8 +20,8 @@ Content-Type: application/json
 Accept-Language: EN
 
 {
-  "phone":"88888",
-  "password": "99999"
+  "phone":"4545",
+  "password": "4545"
 }
 
 ### Authorization Admin

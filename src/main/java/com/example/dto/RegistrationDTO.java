@@ -24,7 +24,9 @@ public class RegistrationDTO {
 
     @Size(min = 4, message = "Password is required")
     private String password;
-
     @Email
     private String email;
+    @Size(min = 4, message = "Photo id is required")
+
+    private String photoId;
 }
