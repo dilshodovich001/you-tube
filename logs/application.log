@@ -298,3 +298,34 @@ Caused by: org.hibernate.MappingException: Column 'attach_id' is duplicated in m
 2022-12-25T20:30:50.310+05:00  INFO 109518 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-12-25T20:30:50.314+05:00  INFO 109518 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2022-12-25T20:30:50.319+05:00  INFO 109518 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-25T23:02:02.173+05:00  INFO 134921 --- [main] com.example.YouTubeApplication           : Starting YouTubeApplication using Java 19.0.1 with PID 134921 (/home/maruf/Downloads/you_tube/target/classes started by maruf in /home/maruf/Downloads/you_tube)
+2022-12-25T23:02:02.185+05:00 DEBUG 134921 --- [main] com.example.YouTubeApplication           : Running with Spring Boot v3.0.0, Spring v6.0.2
+2022-12-25T23:02:02.186+05:00  INFO 134921 --- [main] com.example.YouTubeApplication           : The following 1 profile is active: "dev"
+2022-12-25T23:02:02.875+05:00  INFO 134921 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-25T23:02:02.930+05:00  INFO 134921 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 8 JPA repository interfaces.
+2022-12-25T23:02:03.349+05:00  INFO 134921 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-25T23:02:03.355+05:00  INFO 134921 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-25T23:02:03.356+05:00  INFO 134921 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-25T23:02:03.420+05:00  INFO 134921 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-25T23:02:03.421+05:00  INFO 134921 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1187 ms
+2022-12-25T23:02:03.510+05:00  INFO 134921 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-25T23:02:03.545+05:00  INFO 134921 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2022-12-25T23:02:03.670+05:00  WARN 134921 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-12-25T23:02:03.746+05:00  INFO 134921 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-25T23:02:03.962+05:00  INFO 134921 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1f42366
+2022-12-25T23:02:03.964+05:00  INFO 134921 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-25T23:02:03.993+05:00  INFO 134921 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-12-25T23:02:04.787+05:00  INFO 134921 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-25T23:02:04.794+05:00  INFO 134921 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-25T23:02:05.187+05:00 DEBUG 134921 --- [main] com.example.config.JwtTokenFilter        : Filter 'jwtTokenFilter' configured for use
+2022-12-25T23:02:05.600+05:00  WARN 134921 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-25T23:02:06.195+05:00  INFO 134921 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5a513627, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@41413c5a, org.springframework.security.web.context.SecurityContextHolderFilter@6971c6b7, org.springframework.security.web.header.HeaderWriterFilter@4faccb34, org.springframework.security.web.authentication.logout.LogoutFilter@2c64ee53, com.example.config.JwtTokenFilter@237824b0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b37b01e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f53db1a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@306a9cd8, org.springframework.security.web.access.ExceptionTranslationFilter@608448e7, org.springframework.security.web.access.intercept.AuthorizationFilter@489a722d]
+2022-12-25T23:02:06.468+05:00  INFO 134921 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-25T23:02:06.479+05:00  INFO 134921 --- [main] com.example.YouTubeApplication           : Started YouTubeApplication in 4.695 seconds (process running for 5.233)
+2022-12-25T23:02:06.516+05:00  INFO 134921 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2022-12-25T23:02:06.516+05:00  INFO 134921 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2022-12-25T23:02:06.516+05:00  INFO 134921 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2022-12-25T23:02:06.528+05:00  INFO 134921 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/youtube1 (PostgreSQL 15.1)
+2022-12-25T23:02:06.563+05:00  INFO 134921 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.019s)
+2022-12-25T23:02:06.573+05:00  INFO 134921 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 3
+2022-12-25T23:02:06.573+05:00  INFO 134921 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
